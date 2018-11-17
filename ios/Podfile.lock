@@ -166,7 +166,7 @@ DEPENDENCIES:
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Amplitude-iOS
     - Analytics
     - AppAuth
@@ -231,7 +231,7 @@ SPEC CHECKSUMS:
   FBAudienceNetwork: c0cda151bb2f7b55d1e045e59ebc81f3153989b2
   FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
   FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
-  FBSDKShareKit: b7b5002833a4104fbecad75e8e4e082e91c7a08a
+  FBSDKShareKit: 1869cb24db2cea90666a50cb9d568deb38e2d16e
   Folly: 211775e49d8da0ca658aebc8eab89d642935755c
   glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
   Google-Mobile-Ads-SDK: 1bdf1a4244d0553b1840239874c209c01aef055f
@@ -252,4 +252,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 99b2ca1d521f53a0de52020448357feb66933cd0
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

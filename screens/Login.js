@@ -54,39 +54,18 @@ const styles = StyleSheet.create({
 });
 
 class Login extends React.Component {
-  loginUser = async () => {
-    const { type, token } = await Facebook.logInWithReadPermissionsAsync('183106652514834', {
-      permissions: ['public_profile', 'email'],
-    });
-
-    if (type === 'success') {
-      fetch(
-        'https://graph.facebook.com/me?' +
-        'fields=id,first_name,last_name,email,picture.width(500).height(500)',
-        {
-          method: 'GET',
-          headers: new Headers({
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/x-www-form-urlencoded',
-          }),
-        },
-      )
-        .then(res => res.json())
-        .then((result) => {
-          const req = {
-            email: result.email,
-            firstName: result.first_name,
-            lastName: result.last_name,
-            token,
-          };
-          this.props.serverAuth(req);
-          this.props.navigation.navigate('Home');
-        })
-        .catch(err => console.log(err));
-    }
+  loginUser = () => {
+    const req = {
+      email: 'test@email.com',
+      firstName: 'luke',
+      lastName: 'the duke',
+      token: 'doijvwrwioj',
+    };
+    this.props.serverAuth(req);
+    this.props.navigation.navigate('Home');
   };
 
-  render() {
+  render () {
     return (
       <ImageBackground
         source={backgroundImage}
@@ -101,11 +80,11 @@ class Login extends React.Component {
             <Button
               Button
               icon={{
-              name: 'facebook',
-              type: 'font-awesome',
-            }}
+                name: 'facebook',
+                type: 'font-awesome',
+              }}
               fontFamily="MontserratBold"
-              title="Login with Facebook"
+              title="Luke is a dick"
               buttonStyle={styles.loginButtonFb}
               onPress={this.loginUser}
             />
